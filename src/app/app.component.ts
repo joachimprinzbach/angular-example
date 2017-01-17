@@ -2,8 +2,13 @@ import {Component} from '@angular/core';
 
 @Component({
     selector: 'my-app',
-    template: `<h1>Guten Morgen {{name}}</h1>`
+    template: `
+                <my-greeting
+                    [name]="name">
+                </my-greeting>
+                <my-user-input></my-user-input>
+            `
 })
 export class AppComponent {
-    name = 'Joachim';
+    name = 'Property Binding';
 }
